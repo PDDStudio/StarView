@@ -3,9 +3,9 @@ An animated View inspired by StarWars.
 This View was extracted from [StarWars.Android by Yalantis](https://github.com/Yalantis/StarWars.Android) and modified as a standalone View which can be perfectly used for animated backgrounds.
 ##Sample
 ###Screenshot
-![](/home/pddstudio/dev/android/github/StarView.Demo/gfx/star_view_previmg.png)
+![](https://raw.githubusercontent.com/PDDStudio/StarView/master/gfx/star_view_previmg.png)
 
-*Check out the [sample build]() for a live preview or watch the [sample video on YouTube]()*
+*Check out the [sample build](https://github.com/PDDStudio/StarView/raw/master/starview-demo-build.apk) for a live preview or watch the [sample video on YouTube](https://youtu.be/btYqwkWHgW8)*
 
 ##Getting Started
 
@@ -67,10 +67,11 @@ Make sure to wrap the content of your activity / fragment into an `FrameLayout` 
 - or [Google+](http://plus.google.com/+PatrickJung42)
 
 ##License
-`The MIT License (MIT)
+```
+The MIT License (MIT)
 
 Copyright © 2015 Yalantis, https://yalantis.com
-Copyright © 2016 PDDStudio, http://pddstudio.com
+Copyright © 2016 PDDStudio, https://pddstudio.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -88,4 +89,5 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.`
+THE SOFTWARE.
+```
