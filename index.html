@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>StarView by PDDStudio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">StarView</h1>
+      <h2 class="project-tagline">A space-like animated Layout for Android inspired by StarWars</h2>
+      <a href="https://github.com/PDDStudio/StarView" class="btn">View on GitHub</a>
+      <a href="https://github.com/PDDStudio/StarView/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/PDDStudio/StarView/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="starview" class="anchor" href="#starview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>StarView</h1>
+
+<p>An animated View inspired by StarWars.
+This View was extracted from <a href="https://github.com/Yalantis/StarWars.Android">StarWars.Android by Yalantis</a> and modified as a standalone View which can be perfectly used for animated backgrounds.</p>
+
+<h2>
+<a id="sample" class="anchor" href="#sample" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sample</h2>
+
+<h3>
+<a id="screenshot" class="anchor" href="#screenshot" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Screenshot</h3>
+
+<p><img src="https://raw.githubusercontent.com/PDDStudio/StarView/master/gfx/star_view_previmg.png" alt=""></p>
+
+<p><em>Check out the <a href="https://github.com/PDDStudio/StarView/raw/master/starview-demo-build.apk">sample build</a> for a live preview or watch the <a href="https://youtu.be/btYqwkWHgW8">sample video on YouTube</a></em></p>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<h3>
+<a id="include-into-your-project" class="anchor" href="#include-into-your-project" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Include into your Project</h3>
+
+<p>Add the following dependency to your project:</p>
+
+<div class="highlight highlight-source-java"><pre>dependencies {
+    <span class="pl-c">// other dependencies here...</span>
+    compile <span class="pl-s"><span class="pl-pds">'</span>com.pddstudio:starview:1.0.0<span class="pl-pds">'</span></span>
+}
+</pre></div>
+
+<h3>
+<a id="include-the-view-into-your-layout" class="anchor" href="#include-the-view-into-your-layout" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Include the View into your Layout</h3>
+
+<p>Simply add <code>StarView</code> on top of your layout:</p>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">RelativeLayout</span> 
+    <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">android</span>=<span class="pl-s"><span class="pl-pds">"</span>http://schemas.android.com/apk/res/android<span class="pl-pds">"</span></span>
+    <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">tools</span>=<span class="pl-s"><span class="pl-pds">"</span>http://schemas.android.com/tools<span class="pl-pds">"</span></span>
+    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+    <span class="pl-e">tools</span><span class="pl-e">:</span><span class="pl-e">context</span>=<span class="pl-s"><span class="pl-pds">"</span>com.pddstudio.starviewdemo.MainActivity<span class="pl-pds">"</span></span>&gt;
+
+    &lt;<span class="pl-ent">com</span>.pddstudio.starview.StarView
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span> /&gt;
+
+    &lt;<span class="pl-ent">FrameLayout</span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>&gt;
+
+        &lt;<span class="pl-ent">RelativeLayout</span>
+            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>&gt;
+
+            &lt;<span class="pl-ent">ImageView</span>
+                <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
+                <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
+                <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_centerInParent</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>
+                <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>@drawable/sw_logo<span class="pl-pds">"</span></span>
+                <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">scaleType</span>=<span class="pl-s"><span class="pl-pds">"</span>centerInside<span class="pl-pds">"</span></span>
+                <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">padding</span>=<span class="pl-s"><span class="pl-pds">"</span>64dp<span class="pl-pds">"</span></span>/&gt;
+
+        &lt;/<span class="pl-ent">RelativeLayout</span>&gt;
+
+    &lt;/<span class="pl-ent">FrameLayout</span>&gt;
+
+&lt;/<span class="pl-ent">RelativeLayout</span>&gt;</pre></div>
+
+<p>Make sure to wrap the content of your activity / fragment into an <code>FrameLayout</code> to use it on top of <code>StarView</code></p>
+
+<h3>
+<a id="prepare-the-rest-of-your-application" class="anchor" href="#prepare-the-rest-of-your-application" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Prepare the rest of your application</h3>
+
+<ul>
+<li>StarView doesn't have any background, so it's recommended to set your Fragment/Activity background color to a darker one</li>
+</ul>
+
+<h2>
+<a id="about--contact" class="anchor" href="#about--contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About &amp; Contact</h2>
+
+<ul>
+<li>In case you've a question feel free to hit me up via E-Mail (<a href="mailto:patrick.pddstudio@googlemail.com">patrick.pddstudio@googlemail.com</a>) </li>
+<li>or <a href="http://plus.google.com/+PatrickJung42">Google+</a>
+</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<pre><code>The MIT License (MIT)
+
+Copyright © 2015 Yalantis, https://yalantis.com
+Copyright © 2016 PDDStudio, https://pddstudio.com
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+</code></pre>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/PDDStudio/StarView">StarView</a> is maintained by <a href="https://github.com/PDDStudio">PDDStudio</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
