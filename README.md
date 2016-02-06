@@ -1,6 +1,7 @@
 #StarView
 An animated View inspired by StarWars.
 This View was extracted from [StarWars.Android by Yalantis](https://github.com/Yalantis/StarWars.Android) and modified as a standalone View which can be perfectly used for animated backgrounds.
+
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-StarView-green.svg?style=true)](https://android-arsenal.com/details/1/3100)
 ##Sample
 ###Screenshot
