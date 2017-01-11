@@ -15,10 +15,6 @@ import com.pddstudio.starview.opengl.ParticleSystemRenderer;
  * This Class was created by Patrick J
  * on 02.02.16. For more Details and Licensing
  * have a look at the README.md
- *
- * EDITED by Tristan V to support TextureView
- * instead of GLSurfaceView
- * TextureView doesn't block UI animations
  */
 public class StarView extends GLTextureView {
 
