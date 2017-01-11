@@ -80,10 +80,10 @@ public class StarView extends GLTextureView {
     protected void onVisibilityChanged(@NonNull View changedView, int visibility) {
         super.onVisibilityChanged(changedView, visibility);
         if (visibility == View.VISIBLE) {
-            //Pause the starView
+            //Resume the starView
             onResume();
         } else {
-            //Resume the starView
+            //Pause the starView
             onPause();
         }
     }
