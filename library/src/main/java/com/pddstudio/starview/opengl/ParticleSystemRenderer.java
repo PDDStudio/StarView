@@ -4,7 +4,6 @@ import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.opengl.GLES20;
-import android.opengl.GLSurfaceView;
 import android.opengl.Matrix;
 
 import com.pddstudio.starview.R;
@@ -18,7 +17,7 @@ import javax.microedition.khronos.opengles.GL10;
 /**
  * Created by Artem Kholodnyi on 11/12/15.
  */
-public class ParticleSystemRenderer implements GLSurfaceView.Renderer {
+public class ParticleSystemRenderer implements GLTextureView.Renderer {
     public float ratio;
     public int mvpMatrixHandle;
     public int mvMatrixHandle = -1;
@@ -30,7 +29,7 @@ public class ParticleSystemRenderer implements GLSurfaceView.Renderer {
     public int sizeX = 35;
     public int sizeY = 70;
     public float mTime;
-    private GLSurfaceView mGlSurfaceView;
+    private GLTextureView mGlTextureView;
     /**
      * Store the model matrix. This matrix is used to move models from object space (where each model can be thought
      * of being located at the center of the universe) to world space.
@@ -68,8 +67,8 @@ public class ParticleSystemRenderer implements GLSurfaceView.Renderer {
     private ExecutorService mExecutor = Executors.newSingleThreadExecutor();
 
 
-    public ParticleSystemRenderer(GLSurfaceView glSurfaceView) {
-        mGlSurfaceView = glSurfaceView;
+    public ParticleSystemRenderer(GLTextureView glSurfaceView) {
+        mGlTextureView = glSurfaceView;
         appContext = glSurfaceView.getContext();
     }
 
@@ -153,6 +152,11 @@ public class ParticleSystemRenderer implements GLSurfaceView.Renderer {
         }
     }
 
+    @Override
+    public void onSurfaceDestroyed(GL10 gl) {
+        //TODO: maybe some cleaning should happen here?
+    }
+
     private void drawGl() {
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
 
@@ -229,6 +233,6 @@ public class ParticleSystemRenderer implements GLSurfaceView.Renderer {
     }
 
     public void queue(Runnable runnable) {
-        mGlSurfaceView.queueEvent(runnable);
+        mGlTextureView.queueEvent(runnable);
     }
 }
