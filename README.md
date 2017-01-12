@@ -3,23 +3,29 @@ An animated View inspired by StarWars.
 This View was extracted from [StarWars.Android by Yalantis](https://github.com/Yalantis/StarWars.Android) and modified as a standalone View which can be perfectly used for animated backgrounds.
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-StarView-green.svg?style=true)](https://android-arsenal.com/details/1/3100)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.pddstudio/starview/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.pddstudio/starview)
+
 ##Sample
 ###Screenshot
 ![](https://raw.githubusercontent.com/PDDStudio/StarView/master/gfx/star_view_previmg.png)
 
-*Check out the [sample build](https://github.com/PDDStudio/StarView/raw/master/starview-demo-build.apk) for a live preview or watch the [sample video on YouTube](https://youtu.be/btYqwkWHgW8)*
+*Check out the [release page](https://github.com/PDDStudio/StarView/releases) for a live preview or watch the [sample video on YouTube](https://youtu.be/btYqwkWHgW8)*
 
 ##Getting Started
 
 ###Include into your Project
 Add the following dependency to your project:
+
 ```java
 dependencies {
     // other dependencies here...
-    compile 'com.pddstudio:starview:1.0.0'
+    compile 'com.pddstudio:starview:{version}'
 }
 
 ```
+
+Make sure to replace `{version}` with the latest release.
+You can find the latest version inside the badge at the top of this readme.
 
 ###Include the View into your Layout
 Simply add `StarView` on top of your layout:
@@ -67,6 +73,12 @@ Make sure to wrap the content of your activity / fragment into an `FrameLayout` 
 ##About & Contact
 - In case you've a question feel free to hit me up via E-Mail (patrick.pddstudio@googlemail.com) 
 - or [Google+](http://plus.google.com/+PatrickJung42)
+
+##Contributors
+*A big thanks goes to everyone who contributed to this project!
+If you want to contribute to this project, feel free to do so and open a pull request with your new feature/enhancement.*
+
+- [Tristan Vanderaerden](https://github.com/tristanvda)
 
 ##License
 ```
