@@ -3,10 +3,12 @@ package com.pddstudio.starview;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.pm.ConfigurationInfo;
-import android.graphics.Color;
 import android.opengl.GLSurfaceView;
+import android.support.annotation.NonNull;
 import android.util.AttributeSet;
+import android.view.View;
 
+import com.pddstudio.starview.opengl.GLTextureView;
 import com.pddstudio.starview.opengl.ParticleSystemRenderer;
 
 /**
@@ -14,7 +16,7 @@ import com.pddstudio.starview.opengl.ParticleSystemRenderer;
  * on 02.02.16. For more Details and Licensing
  * have a look at the README.md
  */
-public class StarView extends GLSurfaceView {
+public class StarView extends GLTextureView {
 
     private ActivityManager activityManager;
     private ConfigurationInfo configurationInfo;
@@ -23,7 +25,7 @@ public class StarView extends GLSurfaceView {
     public StarView(Context context) {
         super(context);
 
-        if(!isInEditMode()) {
+        if (!isInEditMode()) {
 
             activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
             configurationInfo = activityManager.getDeviceConfigurationInfo();
@@ -31,14 +33,16 @@ public class StarView extends GLSurfaceView {
 
             if (supportsEs2) {
                 // Request an OpenGL ES 2.0 compatible context.
-                this.setEGLContextClientVersion(2);
 
                 // Set the renderer to our demo renderer, defined below.
                 ParticleSystemRenderer mRenderer = new ParticleSystemRenderer(this);
-                this.setRenderer(mRenderer);
-                this.setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
+
+                setEGLContextClientVersion(2);
+                setEGLConfigChooser(8, 8, 8, 8, 0, 0);
+                setRenderer(mRenderer);
+                setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
             } else {
-                if(!isInEditMode()) throw new UnsupportedOperationException();
+                if (!isInEditMode()) throw new UnsupportedOperationException();
             }
 
         }
@@ -48,7 +52,7 @@ public class StarView extends GLSurfaceView {
     public StarView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        if(!isInEditMode()) {
+        if (!isInEditMode()) {
 
             activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
             configurationInfo = activityManager.getDeviceConfigurationInfo();
@@ -56,19 +60,31 @@ public class StarView extends GLSurfaceView {
 
             if (supportsEs2) {
                 // Request an OpenGL ES 2.0 compatible context.
-                this.setEGLContextClientVersion(2);
 
                 // Set the renderer to our demo renderer, defined below.
                 ParticleSystemRenderer mRenderer = new ParticleSystemRenderer(this);
-                this.setRenderer(mRenderer);
-                this.setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
+
+                setEGLContextClientVersion(2);
+                setEGLConfigChooser(8, 8, 8, 8, 0, 0);
+                setRenderer(mRenderer);
+                setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
             } else {
-                if(!isInEditMode()) throw new UnsupportedOperationException();
+                if (!isInEditMode()) throw new UnsupportedOperationException();
             }
 
         }
 
     }
 
-
+    @Override
+    protected void onVisibilityChanged(@NonNull View changedView, int visibility) {
+        super.onVisibilityChanged(changedView, visibility);
+        if (visibility == View.VISIBLE) {
+            //Resume the starView
+            onResume();
+        } else {
+            //Pause the starView
+            onPause();
+        }
+    }
 }
