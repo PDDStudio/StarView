@@ -12,9 +12,7 @@ import com.pddstudio.starview.opengl.GLTextureView;
 import com.pddstudio.starview.opengl.ParticleSystemRenderer;
 
 /**
- * This Class was created by Patrick J
- * on 02.02.16. For more Details and Licensing
- * have a look at the README.md
+ * An animated OpenGL based {@linkplain android.view.TextureView} which can be used to display a space-like overlay in your layout.
  */
 public class StarView extends GLTextureView {
 
