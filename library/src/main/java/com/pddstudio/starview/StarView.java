@@ -83,6 +83,11 @@ public class StarView extends GLTextureView {
     @Override
     protected void onVisibilityChanged(@NonNull View changedView, int visibility) {
         super.onVisibilityChanged(changedView, visibility);
+
+        if (isInEditMode()) {
+            return;
+        }
+
         if (visibility == View.VISIBLE) {
             //Pause the starView
             onResume();
