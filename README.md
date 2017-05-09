@@ -1,19 +1,19 @@
-#StarView
+# StarView
 An animated View inspired by StarWars.
 This View was extracted from [StarWars.Android by Yalantis](https://github.com/Yalantis/StarWars.Android) and modified as a standalone View which can be perfectly used for animated backgrounds.
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-StarView-green.svg?style=true)](https://android-arsenal.com/details/1/3100)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.pddstudio/starview/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.pddstudio/starview)
 
-##Sample
-###Screenshot
+## Sample
+### Screenshot
 ![](https://raw.githubusercontent.com/PDDStudio/StarView/master/gfx/star_view_previmg.png)
 
 *Check out the [release page](https://github.com/PDDStudio/StarView/releases) for a live preview or watch the [sample video on YouTube](https://youtu.be/btYqwkWHgW8)*
 
-##Getting Started
+## Getting Started
 
-###Include into your Project
+### Include into your Project
 Add the following dependency to your project:
 
 ```java
@@ -27,7 +27,7 @@ dependencies {
 Make sure to replace `{version}` with the latest release.
 You can find the latest version inside the badge at the top of this readme.
 
-###Include the View into your Layout
+### Include the View into your Layout
 Simply add `StarView` on top of your layout:
 
 ```xml
@@ -67,20 +67,20 @@ Simply add `StarView` on top of your layout:
 
 Make sure to wrap the content of your activity / fragment into an `FrameLayout` to use it on top of `StarView`
 
-###Prepare the rest of your application
+### Prepare the rest of your application
 - StarView doesn't have any background, so it's recommended to set your Fragment/Activity background color to a darker one
 
-##About & Contact
+## About & Contact
 - In case you've a question feel free to hit me up via E-Mail (patrick.pddstudio@googlemail.com) 
 - or [Google+](http://plus.google.com/+PatrickJung42)
 
-##Contributors
+## Contributors
 *A big thanks goes to everyone who contributed to this project!
 If you want to contribute to this project, feel free to do so and open a pull request with your new feature/enhancement.*
 
 - [Tristan Vanderaerden](https://github.com/tristanvda)
 
-##License
+## License
 ```
 The MIT License (MIT)
 
